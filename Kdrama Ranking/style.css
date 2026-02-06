@@ -3,18 +3,42 @@ body{
 }
 
 img{
-    height: 200px;
+    border-radius: 5px 5px 5px 5px; /* Add rounded corners to the top left and the top right corner of the image */
+    width: 100%;
 }
 
 div{
     background-color: blanchedalmond;
     padding: 10px;
     border-radius: 30px;
-    height: 70%;
-    width: 70%;
     margin: 30px;
+    width: 40%;
+    height: 40%;
+}
+
+h1{
+    text-align: center;
 }
 
 h2{
     text-align: center;
+}
+
+.card{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 280px;
+    transition: 0.3s;
+    border-radius: 5px;
+        /* 5px rounded corners */
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
 }
