@@ -1,3 +1,149 @@
+
+img{
+  width: 380px;
+  display: block;
+  margin: 0 auto;
+}
+
+body{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 80vw;
+  min-height: calc(100% - 100px);
+  background-color: #1c2541;
+  color: #f4f5f6;
+  font-family: 'Trebuchet MS', 'Century Gothic', sans-serif;
+
+}
+
+h1, h2{
+  text-align: center;
+  color: #e0a96d;
+}
+
+h3{
+  text-align: left;
+  color: #e0a96d;
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+hr, section{
+  width: 100%;
+}
+
+nav a {
+    list-style-type: none; 
+    padding: 0;            
+    margin: 0;  
+    text-align: center;
+    margin-bottom: 10px;  
+    color: #e0a96d;
+}
+
+.flyer-nav-stacked {
+  text-align: right;
+  margin-top: 25px;
+}
+.flyer-nav-stacked a {
+  display: inline-block; 
+  color: #e0a96d;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.flyer-nav-stacked a:hover {
+  color: #ff5a36;
+}
+
+li{
+  list-style-type: square;
+}
+
+
+
+
+
+
+img{
+  width: 380px;
+  display: block;
+  margin: 0 auto;
+}
+
+body{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 80vw;
+  min-height: calc(100% - 100px);
+  background-color: #1c2541;
+  color: #f4f5f6;
+  font-family: 'Trebuchet MS', 'Century Gothic', sans-serif;
+
+}
+
+h1, h2{
+  text-align: center;
+  color: #e0a96d;
+}
+
+h3{
+  text-align: left;
+  color: #e0a96d;
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+hr, section{
+  width: 100%;
+}
+
+nav a {
+    list-style-type: none; 
+    padding: 0;            
+    margin: 0;  
+    text-align: center;
+    margin-bottom: 10px;  
+    color: #e0a96d;
+}
+
+.flyer-nav-stacked {
+  text-align: right;
+  margin-top: 25px;
+}
+.flyer-nav-stacked a {
+  display: inline-block; 
+  color: #e0a96d;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.flyer-nav-stacked a:hover {
+  color: #ff5a36;
+}
+
+li{
+  list-style-type: square;
+}
+
+
+
+
+
+
+
 img{
   width: 380px;
   display: block;
