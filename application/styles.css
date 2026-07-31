@@ -1,0 +1,119 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #FAF8F5;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    color: #4A3E3D;
+}
+
+.first{
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+form{
+    text-align: left;
+}
+    
+
+input::placeholder {
+  color: #111111;
+  padding: 10px;
+}
+
+input, textarea:focus{
+  border: 2px none #D4A373;
+}
+
+input, select, textarea:invalid{
+  border: 2px solid red;
+}
+
+input, select, textarea:valid{
+  border: 2px solid green;
+}
+
+button{
+    background-color: #9ebaef;
+    margin: 5px auto;
+    display: block;
+    margin-top: 5px;
+    margin-left: 4px;
+    padding: 10px 18px; 
+    font-size: 15px;
+    color: #4A3E3D;
+}
+
+
+.resume{
+    margin-top: 30px;
+}
+
+#message{
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+button:hover{
+  background-color: midnightblue;
+  color: whitesmoke;
+}
+
+.radio-group input[type="radio"]:checked{
+  border: 2px solid yellow;
+  background-color: midnightblue;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+:checked{
+  color: crimson;
+}
+
+
+
+fieldset{
+  border: 2px solid rgb(6, 6, 20);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+input[type="text"], 
+input[type="email"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box; 
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px; 
+  color: #333;
+  background-color: #ffffff64;
+}
+
+fieldset legend {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4A3E3D;
+  margin-bottom: 10px;
+}

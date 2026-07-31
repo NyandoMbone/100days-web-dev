@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="first">
+        <h1>Job Application Form</h1>
+    <div class="container">
+        <form>
+            <fieldset>
+                <legend>Name</legend>
+                <input
+                type="text"
+                id="name"
+                placeholder="Name"
+                > 
+            </fieldset>
+
+            <fieldset>
+                <legend>Email</legend>
+            <input
+             type="email"
+             id="email"
+             placeholder="Email"
+            >
+            </fieldset>
+
+            <fieldset>
+                <legend>Phone Number</legend>
+            <input
+             type="text"
+             id="phone"
+             placeholder="Phone Number"
+            >
+            </fieldset>
+
+            <fieldset>
+                <legend>What Position Are You Applying For?</legend>
+            <label>Position</label>
+            <select id="position">
+                <option value="job1">Job-1</option>
+                <option value="job2">Job-2</option>
+                <option value="job3">Job-3</option>
+            </select>
+            </fieldset>
+
+            <fieldset class="radio-group">
+                <legend>How Available Are You?</legend>
+                <label>Full-Time</label>
+                <input
+                type="radio"
+                id="availability"
+                name="availability"
+                checked
+                >
+
+                <label>Part-Time</label>
+                <input
+                type="radio"
+                id="availability"
+                name="availability"
+                >
+            </fieldset>
+            <label>Why Do You Want This Job?</label>
+            <textarea id="message"
+            placeholder="Write your answer here..."
+            ></textarea>
+            
+                <legend class="resume">Upload Your Resume</legend>
+                <button type="upload" class="upload">Upload</button>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
