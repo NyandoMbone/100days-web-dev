@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple To‑Do List · HTML + CSS</title>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+  <div class="todo-card">
+
+    <!-- header -->
+    <div class="todo-header">
+      <div class="header-icon"></div>
+      <h1>
+        To‑Do
+      </h1>
+    </div>
+
+    <!-- add task (static) -->
+    <div class="add-task">
+      <input type="text" placeholder="Write a task …" >
+      <button type="button"> Add</button>
+    </div>
+
+    <!-- task list – pure html / css, all static but fully styled -->
+    <div class="task-list">
+
+      <!-- task 1 – unchecked -->
+      <label class="task-item">
+        <input type="checkbox">
+        <span class="task-text"> Finalize project proposal</span>
+        <span class="delete-icon">✕</span>
+      </label>
+
+      <!-- task 2 – checked (completed) -->
+      <label class="task-item">
+        <input type="checkbox" checked>
+        <span class="task-text"> Call with design team</span>
+        <span class="delete-icon">✕</span>
+      </label>
+
+      <!-- task 3 – unchecked -->
+      <label class="task-item">
+        <input type="checkbox">
+        <span class="task-text"> Write user guide (v2)</span>
+        <span class="delete-icon">✕</span>
+      </label>
+
+      <!-- task 4 – checked (completed) -->
+      <label class="task-item">
+        <input type="checkbox" checked>
+        <span class="task-text"> Update dashboard metrics</span>
+        <span class="delete-icon">✕</span>
+      </label>
+
+      <!-- task 5 – unchecked -->
+      <label class="task-item">
+        <input type="checkbox">
+        <span class="task-text"> Review weekly priorities</span>
+        <span class="delete-icon">✕</span>
+      </label>
+    </div>
+
+    <!-- footer with static info -->
+    <div class="todo-footer">
+      <span class="count-badge">✔ 2 done · 3 left</span>
+      </span>
+    </div>
+
+    <!-- small note: all interactions are purely CSS (checkbox toggles strike) -->
+  </div>
+</body>
+</html>
