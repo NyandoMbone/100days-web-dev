@@ -1,0 +1,159 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* ===== CARD LIST ===== */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+/* ===== INDIVIDUAL CARD ===== */
+.path {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: #ffffff;
+    padding: 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.path:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #4a90d9;
+}
+
+/* ===== ICON ===== */
+.icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: #eef3f8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.path:hover .icon {
+    background: #4a90d9;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Icon turns white on hover */
+.path:hover .img {
+    filter: brightness(0) invert(1);
+}
+
+/* ===== TEXT CONTENT ===== */
+.action {
+    flex: 1;
+}
+
+.action h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+
+.action p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .path {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .action h3 {
+        font-size: 1.1rem;
+    }
+
+    .action p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .path {
+        padding: 16px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+}
