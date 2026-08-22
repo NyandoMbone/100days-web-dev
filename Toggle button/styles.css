@@ -1,0 +1,225 @@
+body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f3f5;
+      transition: background-color 0.5s ease;
+      font-family: system-ui, sans-serif;
+    }
+
+    body.dark-mode {
+      background-color: #121214;
+    }
+
+    /* --- Toggle Container --- */
+    .toggle-label {
+      position: relative;
+      width: 170px;
+      height: 84px;
+      cursor: pointer;
+      display: inline-block;
+      user-select: none;
+    }
+
+    .toggle-input {
+      display: none;
+    }
+
+    /* --- The Track Capsule --- */
+    .toggle-track {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border: 5px solid #4a3b32;
+      border-radius: 50px;
+      background: linear-gradient(135px, #4ee3b5, #88f3d9);
+      overflow: hidden;
+      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.05);
+      transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* --- Day Elements (Clouds & Sunburst) --- */
+    .day-decor {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      transition: transform 0.6s ease, opacity 0.5s;
+    }
+
+    .sunburst {
+      position: absolute;
+      top: -20px; right: -10px;
+      width: 130px;
+      height: 130px;
+      background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+    }
+
+    .cloud {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: 50%;
+    }
+    .cloud-1 { width: 55px; height: 55px; bottom: -12px; left: 15px; }
+    .cloud-2 { width: 45px; height: 45px; bottom: -5px; left: 50px; }
+
+    /* --- Night Elements (Stars & Clouds) --- */
+    .night-decor {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: transform 0.6s ease, opacity 0.5s;
+    }
+
+    .star {
+      position: absolute;
+      background: #ffffff;
+      border-radius: 50%;
+    }
+    .star-1 { width: 4px; height: 4px; top: 22px; left: 25px; }
+    .star-2 { width: 5px; height: 5px; top: 42px; left: 45px; }
+    .star-3 { width: 3px; height: 3px; top: 18px; left: 65px; }
+
+    .night-cloud {
+      position: absolute;
+      background: rgba(132, 27, 155, 0.3);
+      border-radius: 50%;
+    }
+    .night-cloud-1 { width: 65px; height: 65px; bottom: -15px; right: 10px; }
+    .night-cloud-2 { width: 50px; height: 50px; bottom: -8px; right: 45px; }
+
+    /* --- The Ball (Rolling Thumb Container) --- */
+    .ball-container {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 64px;
+      height: 64px;
+      z-index: 10;
+      /* Cubic-bezier provides an organic, snappy movement physics effect */
+      transition: transform 0.6s cubic-bezier(0.5, -0.1, 0.3, 1.2);
+    }
+
+    /* --- Visual Ball Style --- */
+    .ball {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 5px solid #4a3b32;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+      /* This transition handles the actual rotation spin */
+      transition: transform 0.6s cubic-bezier(0.5, -0.1, 0.3, 1.2), background-color 0.6s;
+    }
+
+    /* --- The Animated Face Wrapper --- */
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Eyes Container */
+    .eyes {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+
+    .eye {
+      width: 6px;
+      height: 6px;
+      background-color: #4a3b32;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    /* Freckles/Blush */
+    .freckles {
+      position: absolute;
+      width: 44px;
+      display: flex;
+      justify-content: space-between;
+      top: 28px;
+    }
+    .dot {
+      width: 3px;
+      height: 3px;
+      background-color: #ff9ebb;
+      border-radius: 50%;
+    }
+
+    /* Mouth Shape */
+    .mouth {
+      width: 14px;
+      height: 8px;
+      background-color: #ff6584;
+      border: 3px solid #4a3b32;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      transition: all 0.4s ease;
+    }
+
+    /* --- TRIGGERED STATES (WHEN CLICKED) --- */
+
+    /* 1. Track Colors Shift to Dark Purple Gradient */
+    .toggle-input:checked + .toggle-track {
+      background: linear-gradient(135px, #1d0791, #841b9b);
+    }
+
+    /* 2. Slide the Ball Container to the Right Side */
+    .toggle-input:checked + .toggle-track .ball-container {
+      transform: translateX(86px);
+    }
+
+    /* 3. Spin/Roll the ball clockwise 360 degrees & turn pale grey */
+    .toggle-input:checked + .toggle-track .ball {
+      transform: rotate(360deg);
+      background-color: #d1d9df;
+    }
+
+    /* 4. Background Art Layer Transitions */
+    .toggle-input:checked + .toggle-track .day-decor {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+
+    .toggle-input:checked + .toggle-track .night-decor {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 5. Face Expression Transformation (Day -> Night sleeping face) */
+    .toggle-input:checked + .toggle-track .eye {
+      width: 8px;
+      height: 4px;
+      background: transparent;
+      border: 2px solid #4a3b32;
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .toggle-input:checked + .toggle-track .mouth {
+      width: 6px;
+      height: 4px;
+      background: transparent;
+      border: 2px solid #4a3b32;
+      border-top: none;
+      border-radius: 0 0 3px 3px;
+    }
+
+    .toggle-input:checked + .toggle-track .dot {
+      background-color: #a4b3bd;
+    }

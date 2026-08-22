@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute Character Theme Toggle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Component Body -->
+  <label class="toggle-label">
+    <input type="checkbox" class="toggle-input" id="theme-switch">
+    
+    <div class="toggle-track">
+      <!-- Animated Slider Knob -->
+      <div class="ball-container">
+        <div class="ball">
+          <div class="face">
+            <div class="freckles">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bright Day Graphics Layer -->
+      <div class="day-decor">
+        <div class="sunburst"></div>
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+      </div>
+
+      <!-- Dark Night Graphics Layer -->
+      <div class="night-decor">
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="night-cloud night-cloud-1"></div>
+        <div class="night-cloud night-cloud-2"></div>
+      </div>
+    </div>
+  </label>
+
+  <script>
+    // Live update background wallpaper based on toggle state
+    const toggle = document.getElementById('theme-switch');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+
+</body>
+</html>
