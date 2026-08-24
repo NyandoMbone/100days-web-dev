@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Pagination UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Pagination UI -->
+    <div class="pagination-container">
+        <button class="nav-btn">&lt; Prev</button>
+
+        <!-- Page 1 -->
+        <input type="radio" name="page" id="page1">
+        <label for="page1" class="page-label">1</label>
+
+        <!-- Page 2 (Checked by default) -->
+        <input type="radio" name="page" id="page2" checked>
+        <label for="page2" class="page-label">2</label>
+
+        <!-- Page 3 -->
+        <input type="radio" name="page" id="page3">
+        <label for="page3" class="page-label">3</label>
+
+        <!-- Page 4 -->
+        <input type="radio" name="page" id="page4">
+        <label for="page4" class="page-label">4</label>
+
+        <!-- Page 5 -->
+        <input type="radio" name="page" id="page5">
+        <label for="page5" class="page-label">5</label>
+
+        <!-- Page 6 -->
+        <input type="radio" name="page" id="page6">
+        <label for="page6" class="page-label">6</label>
+
+        <button class="nav-btn">Next &gt;</button>
+    </div>
+
+    <h1>Pagination UI Design</h1>
+
+    <script>
+        // Get all the radio inputs
+        const radios = document.querySelectorAll('input[name="page"]');
+        
+        // Define colors for each page (Feel free to change these!)
+        const colors = [
+            '#2ecc71', // Green (1)
+            '#3498db', // Blue (2) - Matches your image
+            '#9b59b6', // Purple (3)
+            '#e74c3c', // Red (4)
+            '#f1c40f', // Yellow (5)
+            '#e67e22'  // Orange (6)
+        ];
+
+        // Add event listener to each radio
+        radios.forEach((radio, index) => {
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    // Change the body background color based on selected page
+                    document.body.style.backgroundColor = colors[index];
+                }
+            });
+        });
+    </script>
+</body>
+</html>
