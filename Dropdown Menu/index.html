@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="nav-container">
+        
+        <!-- THE FIX: Checkboxes are placed INSIDE the container, BEFORE the .nav-bar so they are siblings -->
+        <input type="checkbox" id="about-toggle">
+        <input type="checkbox" id="services-toggle">
+        <input type="checkbox" id="portfolio-toggle">
+
+        <a href="#" class="back-btn">←</a>
+
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            
+            <!-- ABOUT -->
+            <div class="item-wrapper wrapper-about">
+                <label for="about-toggle" class="nav-item">ABOUT</label>
+                <div class="dropdown">
+                    <a href="#">Our Story</a>
+                    <a href="#">Team</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="item-wrapper wrapper-services">
+                <label for="services-toggle" class="nav-item">SERVICES</label>
+                <div class="dropdown">
+                    <a href="#">Web Design</a>
+                    <a href="#">Graphics</a>
+                    <a href="#">UI / UX Design</a>
+                    <a href="#">Animation</a>
+                    <a href="#">Marketing</a>
+                </div>
+            </div>
+
+            <!-- PORTFOLIO -->
+            <div class="item-wrapper wrapper-portfolio">
+                <label for="portfolio-toggle" class="nav-item">PORTFOLIO</label>
+                <div class="dropdown">
+                    <a href="#">Web Projects</a>
+                    <a href="#">Branding</a>
+                    <a href="#">Illustrations</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="corner-actions">
+        <button class="action-btn">⤢</button>
+        <button class="action-btn">↻</button>
+    </div>
+
+</body>
+</html>
