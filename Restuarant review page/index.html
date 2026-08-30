@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Review</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Please Review Us</h1>
+            <p>Please let us know how was the food and service.</p>
+        </div>
+
+        <form>
+
+            <!-- Date -->
+            <div class="form-group">
+                <label>Day Visited</label>
+
+                <div class="date-inputs">
+                    <div>
+                        <input type="text" placeholder="01">
+                        <small>Month</small>
+                    </div>
+
+                    <div>
+                        <input type="text" placeholder="01">
+                        <small>Day</small>
+                    </div>
+
+                    <div>
+                        <input type="text" placeholder="2000">
+                        <small>Year</small>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Dine In / Take Out -->
+            <div class="form-group">
+                <label>Dine In / Take Out</label>
+
+                <div class="options two-options">
+                    <label>
+                        <input type="radio" name="dining">
+                        Dine In
+                    </label>
+
+                    <label>
+                        <input type="radio" name="dining">
+                        Take Out
+                    </label>
+                </div>
+            </div>
+
+
+            <hr>
+
+
+            <!-- Food Quality -->
+            <div class="rating-group">
+                <label>Food Quality</label>
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="food">
+                        Excellent
+                    </label>
+
+                    <label>
+                        <input type="radio" name="food">
+                        Good
+                    </label>
+
+                    <label>
+                        <input type="radio" name="food">
+                        Average
+                    </label>
+
+                    <label>
+                        <input type="radio" name="food">
+                        Dissatisfied
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Service Quality -->
+            <div class="rating-group">
+                <label>Overall Service Quality</label>
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="service">
+                        Excellent
+                    </label>
+
+                    <label>
+                        <input type="radio" name="service">
+                        Good
+                    </label>
+
+                    <label>
+                        <input type="radio" name="service">
+                        Average
+                    </label>
+
+                    <label>
+                        <input type="radio" name="service">
+                        Dissatisfied
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Cleanliness -->
+            <div class="rating-group">
+                <label>Cleanliness</label>
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="cleanliness">
+                        Excellent
+                    </label>
+
+                    <label>
+                        <input type="radio" name="cleanliness">
+                        Good
+                    </label>
+
+                    <label>
+                        <input type="radio" name="cleanliness">
+                        Average
+                    </label>
+
+                    <label>
+                        <input type="radio" name="cleanliness">
+                        Dissatisfied
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Order Accuracy -->
+            <div class="rating-group">
+                <label>Order Accuracy</label>
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="accuracy">
+                        Excellent
+                    </label>
+
+                    <label>
+                        <input type="radio" name="accuracy">
+                        Good
+                    </label>
+
+                    <label>
+                        <input type="radio" name="accuracy">
+                        Average
+                    </label>
+
+                    <label>
+                        <input type="radio" name="accuracy">
+                        Dissatisfied
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Speed -->
+            <div class="rating-group">
+                <label>Speed of Service</label>
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="speed">
+                        Excellent
+                    </label>
+
+                    <label>
+                        <input type="radio" name="speed">
+                        Good
+                    </label>
+
+                    <label>
+                        <input type="radio" name="speed">
+                        Average
+                    </label>
+
+                    <label>
+                        <input type="radio" name="speed">
+                        Dissatisfied
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Value -->
+            <div class="rating-group">
+                <label>Value</label>
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="value">
+                        Excellent
+                    </label>
+
+                    <label>
+                        <input type="radio" name="value">
+                        Good
+                    </label>
+
+                    <label>
+                        <input type="radio" name="value">
+                        Average
+                    </label>
+
+                    <label>
+                        <input type="radio" name="value">
+                        Dissatisfied
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Overall Experience -->
+            <div class="rating-group">
+                <label>Overall Experience</label>
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="experience">
+                        Excellent
+                    </label>
+
+                    <label>
+                        <input type="radio" name="experience">
+                        Good
+                    </label>
+
+                    <label>
+                        <input type="radio" name="experience">
+                        Average
+                    </label>
+
+                    <label>
+                        <input type="radio" name="experience">
+                        Dissatisfied
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Comments -->
+            <div class="comments">
+                <label for="comments">
+                    Any comments, questions or suggestions?
+                </label>
+
+                <textarea id="comments" rows="6"></textarea>
+            </div>
+
+
+            <hr>
+
+
+            <!-- Name -->
+            <div class="input-group">
+                <label for="name">Name</label>
+
+                <div>
+                    <input type="text" id="name">
+                    <small>optional</small>
+                </div>
+            </div>
+
+
+            <!-- Age -->
+            <div class="input-group">
+                <label for="age">Age</label>
+
+                <div>
+                    <select id="age">
+                        <option>Please Select</option>
+                        <option>Under 18</option>
+                        <option>18 - 25</option>
+                        <option>26 - 35</option>
+                        <option>36 - 50</option>
+                        <option>51+</option>
+                    </select>
+
+                    <small>optional</small>
+                </div>
+            </div>
+
+
+            <!-- Email -->
+            <div class="input-group">
+                <label for="email">Email</label>
+
+                <div>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@example.com"
+                    >
+                    <small>optional</small>
+                </div>
+            </div>
+
+
+            <!-- Submit -->
+            <div class="submit-area">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
