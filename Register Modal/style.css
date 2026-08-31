@@ -1,0 +1,84 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .modal-card {
+      background-color: #0084ff;
+      color: white;
+      width: 400px;
+      height: 500px;
+      padding: 30px;
+      border-radius: 4px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .close-btn:hover {
+      opacity: 1;
+    }
+
+    .close-icon {
+      width: 24px;
+      height: 24px;
+      padding-bottom: 3px;
+      border: 2px solid white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 35px;
+      opacity: 0.9;
+    }
+
+    .register-btn {
+      background-color: white;
+      color: #0084ff;
+      text-decoration: none;
+      padding: 12px 40px;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background-color 0.2s;
+      width: 80%;
+      text-align: center;
+    }
+
+    .register-btn:hover {
+      background-color: #eee1e1;
+    }
