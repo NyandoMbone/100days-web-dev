@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Component</title>
+    <!-- Google Fonts for modern look & FontAwesome for utility icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<div class="comments-container">
+    <h2 class="comments-header">Comments (10)</h2>
+
+    <!-- Comment 1 -->
+    <div class="comment-card">
+        <div class="comment-top">
+            <div class="user-info">
+                <!-- Using placeholder images for demo UI purposes -->
+                <img src="av1.jpg" alt="Author Smith" class="avatar">
+                <div>
+                    <span class="username">Author Smith</span>
+                    <span class="timestamp">• 1 hour ago</span>
+                </div>
+            </div>
+            <div class="comment-actions">
+                <button class="action-btn"><i class="fa-solid fa-reply"></i> Reply</button>
+            </div>
+        </div>
+        <p class="comment-text">
+            Aliquam sed diam tellus purus nulla consequat fermentum pulvinar. Erat consequat cras eget sed sed rhoncus auctor. Vel est est turpis vehicula natoque hendrerit id a elementum. Pellentesque viverra nibh eget morbi lorem risus augue. Donec risus curabitur quis pulvinar gravida pellentesque.
+        </p>
+    </div>
+
+    <!-- Comment 2 -->
+    <div class="comment-card">
+        <div class="comment-top">
+            <div class="user-info">
+                <img src="av2.jpg" alt="Katherine Williams" class="avatar">
+                <div>
+                    <span class="username">Katherine Williams</span>
+                    <span class="timestamp">• 2 days ago</span>
+                </div>
+            </div>
+            <div class="comment-actions">
+                <button class="action-btn"><i class="fa-solid fa-reply"></i> Reply</button>
+            </div>
+        </div>
+        <p class="comment-text">
+            Quam lorem sed ipsum sem sollicitudin volutpat. Posuere pellentesque eget nec adipiscing interdum porttitor duis diam scelerisque. Vestibulum viverra orci volutpat massa fringilla commodo. In tellus augue turpis nibh aliquam donec vulputate.
+        </p>
+    </div>
+
+    <!-- Comment 3 (With Admin/Author Controls like Edit & Delete) -->
+    <div class="comment-card">
+        <div class="comment-top">
+            <div class="user-info">
+                <img src="av3.jpg" alt="Miles Miller" class="avatar">
+                <div>
+                    <span class="username">Miles Miller</span>
+                    <span class="timestamp">• 5 days ago</span>
+                </div>
+            </div>
+            <div class="comment-actions">
+                <button class="action-btn delete"><i class="fa-solid fa-trash-can"></i> Delete</button>
+                <button class="action-btn"><i class="fa-solid fa-pen"></i> Edit</button>
+            </div>
+        </div>
+        <p class="comment-text">
+            Sit sed vel tellus lobortis turpis vestibulum. Pellentesque fermentum sapien euismod faucibus posuere facilisis sapien in. Risus amet ornare nulla nisi orci imperdiet. Sed tristique arcu aliquet placerat sapien felis erat enim ullamcorper.
+        </p>
+    </div>
+
+    <!-- New Comment Text Area Input -->
+    <div class="editor-container">
+        <div class="editor-box">
+            <textarea class="editor-textarea" placeholder="Enter your comment..."></textarea>
+            
+            <!-- Basic formatting toolbar mimicking the icons in your image -->
+            <div class="editor-toolbar">
+                <button class="toolbar-btn" title="Bold"><i class="fa-solid fa-bold"></i></button>
+                <button class="toolbar-btn" title="Italic"><i class="fa-solid fa-italic"></i></button>
+                <button class="toolbar-btn" title="Underline"><i class="fa-solid fa-underline"></i></button>
+                <button class="toolbar-btn" title="Strikethrough"><i class="fa-solid fa-strikethrough"></i></button>
+                <button class="toolbar-btn" title="Code Block"><i class="fa-solid fa-code"></i></button>
+            </div>
+        </div>
+        
+        <!-- Bottom Actions -->
+        <div class="form-controls">
+            <button class="btn-cancel">Cancel</button>
+            <button class="btn-submit">Comment</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
