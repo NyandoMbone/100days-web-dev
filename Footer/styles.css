@@ -1,0 +1,137 @@
+ body {
+            background-image: url(g9.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            min-height: 180vh;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Pre-footer content area styling */
+        .top {
+            text-align: center;
+            max-width: 600px;
+            margin: 100px auto 40px auto;
+            padding: 20px;
+            color: #333;
+        }
+
+        .top h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .top img {
+            width: 40px;
+            height: auto;
+        }
+
+        /* Main Footer Wrapper */
+        .footer {
+            background: rgba(255, 255, 255, 0.92); /* White overlay so it stands out against your background image */
+            backdrop-filter: blur(10px); /* Modern blur effect */
+            padding: 60px 40px 30px 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            margin-top: auto;
+        }
+
+        /* Flexbox to separate Left (Heading) and Right (Links Columns) */
+        .footer-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        /* Left Side: Brand Identity */
+        .heading {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
+
+        .heading h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: #0f172a;
+        }
+
+        .heading p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Right Side: Container for the 4 link columns */
+        .content {
+            flex: 2;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            min-width: 500px;
+        }
+
+        /* Individual link column alignment */
+        .first {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first p {
+            margin: 0 0 12px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Bold Headers */
+        .first .bold {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+
+        /* Nav Link Styling */
+        .first a {
+            text-decoration: none;
+            color: #64748b;
+            transition: color 0.2s ease;
+        }
+
+        .first a:hover {
+            color: #0f172a; /* Darkens link on hover */
+        }
+
+        /* Bottom Copyright Styling */
+        footer {
+            max-width: 1200px;
+            margin: 50px auto 0 auto;
+            padding-top: 25px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        /* Makes layout stack gracefully on small mobile screens */
+        @media (max-width: 768px) {
+            .footer-content-wrapper {
+                flex-direction: column;
+            }
+            .content {
+                min-width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
