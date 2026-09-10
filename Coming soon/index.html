@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <!-- Importing a clean sans-serif font and a script font for the "Coming" text -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@1,400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Soft blue gradient background mimicking the original look */
+            background: radial-gradient(circle, #f0f7fc 0%, #d6e6f2 100%);
+            color: #2b3a4a;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .hero-graphics {
+            position: relative;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        /* Brush stroke effect in blue using CSS clip-path/shapes */
+        .brush-stroke {
+            background: linear-gradient(135deg, #a3c9e8 0%, #70a1d7 100%);
+            width: 280px;
+            height: 90px;
+            border-radius: 50% 40% 60% 30% / 40% 50% 30% 60%;
+            transform: rotate(-5deg);
+            filter: blur(1px);
+            opacity: 0.85;
+            margin: 0 auto;
+        }
+
+        .title-coming {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 3.5rem;
+            color: #1a2f4c;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -65%) rotate(-2deg);
+            font-weight: 700;
+        }
+
+        .title-soon {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a2f4c;
+            margin-top: -10px;
+            margin-left: 120px;
+            letter-spacing: 1px;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #4a5d73;
+        }
+
+        .sub-description {
+            font-size: 0.8rem;
+            color: #718096;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 1px solid #b8c9d9;
+            border-radius: 25px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            outline: none;
+            background-color: #ffffff;
+            transition: border-color 0.3s ease;
+        }
+
+        .email-input:focus {
+            border-color: #538cc6;
+        }
+
+        .email-input::placeholder {
+            color: #a0aec0;
+        }
+
+        .submit-btn {
+            background-color: #538cc6;
+            color: #ffffff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 400;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #3b71a8;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                flex-direction: column;
+                width: 100%;
+            }
+            .email-input, .submit-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .title-coming {
+                font-size: 2.8rem;
+            }
+            .title-soon {
+                font-size: 1.6rem;
+                margin-left: 80px;
+            }
+            .brush-stroke {
+                width: 220px;
+                height: 75px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero text with the graphical background swatch -->
+        <div class="hero-graphics">
+            <div class="brush-stroke"></div>
+            <h1 class="title-coming">Coming</h1>
+            <div class="title-soon">soon...</div>
+        </div>
+
+        <!-- Main text update to fit the blue theme color scheme -->
+        <p class="description">
+            We are coming soon with something<br>
+            awesome for all blue addicts.
+        </p>
+
+        <!-- Sub-text and email signup form -->
+        <p class="sub-description">
+            Leave us your e-mail address,<br>
+            you will be informed as soon as it is live.
+        </p>
+
+        <form class="form-container" onsubmit="event.preventDefault();">
+            <input type="email" class="email-input" placeholder="Your e-mail" required>
+            <button type="submit" class="submit-btn">
+                Notify me <span>&rarr;</span>
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
