@@ -1,0 +1,266 @@
+/* Base Resets & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Phone Container Frame */
+.phone-container {
+  width: 360px;
+  height: 640px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.app-header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Pure CSS Hamburger Drawing */
+.hamburger-btn {
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger-btn span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+/* Pure CSS Search Icon Drawing */
+.search-btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.search-circle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.search-handle {
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(-45deg);
+  bottom: -2px;
+  right: 2px;
+}
+
+/* Close button text format */
+.close-btn {
+  font-size: 32px;
+  color: #000000;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Main Graphic Layout */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.graphic-hero {
+  height: 280px;
+  background-color: #5c16c7;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Abstract design shapes */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.blob-1 {
+  width: 180px;
+  height: 140px;
+  background-color: #3f00b5;
+  top: -20px;
+  right: -30px;
+  border-radius: 40% 60% 60% 40% / 50% 30% 70% 50%;
+}
+
+.blob-2 {
+  width: 140px;
+  height: 120px;
+  background-color: #6eff9e;
+  top: 70px;
+  left: 10px;
+  border-radius: 50% 70% 40% 60% / 40% 60% 40% 60%;
+}
+
+.blob-3 {
+  width: 160px;
+  height: 150px;
+  background-color: #1a0066;
+  bottom: -40px;
+  left: 40px;
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+}
+
+.striped-pattern {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.25) 6px,
+    rgba(255, 255, 255, 0.25) 12px
+  );
+}
+
+/* Article Typography */
+.article-body {
+  padding: 35px 25px;
+}
+
+.article-body h1 {
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  color: #111111;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.article-body p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Side Navigation Drawer Mechanics */
+.menu-checkbox {
+  display: none;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  left: -280px; /* Kept completely offscreen by default */
+  width: 260px;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 100;
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 30px 20px;
+  transition: left 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+.sidebar-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-links, .user-links {
+  list-style: none;
+}
+
+.nav-links {
+  flex: 1;
+}
+
+.nav-links li, .user-links li {
+  margin-bottom: 14px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.user-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover, .user-links a:hover {
+  color: #5c16c7;
+}
+
+.user-links {
+  border-top: 1px solid #eeeeee;
+  padding-top: 20px;
+}
+
+/* Overlay dark shade background layer */
+.sidebar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Checkbox Toggle Animations */
+.menu-checkbox:checked ~ .phone-container .sidebar-nav {
+  left: 0; /* Shifts side menu into screen */
+}
+
+.menu-checkbox:checked ~ .phone-container .sidebar-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}

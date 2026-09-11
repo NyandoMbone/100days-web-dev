@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile News UI with Sidebar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Checkbox state controller -->
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+  <!-- The phone frame mockup container -->
+  <div class="phone-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <!-- Pure CSS Hamburger Icon -->
+      <label for="menu-toggle" class="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      
+      <!-- Pure CSS Search Icon (magnifying glass) -->
+      <div class="search-btn">
+        <span class="search-circle"></span>
+        <span class="search-handle"></span>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Abstract Graphic Section -->
+      <div class="graphic-hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="striped-pattern"></div>
+      </div>
+
+      <!-- Typography Articles -->
+      <article class="article-body">
+        <h1>Lorem ipsum dolor sit</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </article>
+    </main>
+
+    <!-- Side Navigation Drawer -->
+    <nav class="sidebar-nav">
+      <div class="sidebar-header">
+        <!-- Close icon using standard text character (X) -->
+        <label for="menu-toggle" class="close-btn">&times;</label>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="#">Opinion</a></li>
+        <li><a href="#">Economy</a></li>
+        <li><a href="#">International</a></li>
+        <li><a href="#">Society</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Health</a></li>
+      </ul>
+
+      <ul class="user-links">
+        <li><a href="#">My account</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Sidebar Overlay Shadow Background -->
+    <label for="menu-toggle" class="sidebar-overlay"></label>
+
+  </div>
+
+</body>
+</html>
