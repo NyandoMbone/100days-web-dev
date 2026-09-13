@@ -1,0 +1,64 @@
+/* Center alignment for demo purposes */
+body {
+  background-color: #0b0c10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Main search bar wrapper */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #12131c;
+  border-radius: 12px;
+  padding: 6px 12px;
+  width: 400px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Text input area */
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.search-input::placeholder {
+  color: #696b7b;
+}
+
+/* Icon button styling */
+.search-btn {
+  background: #1a1c29;
+  border: 1px solid #282a36;
+  border-radius: 8px;
+  color: #a0a5c1;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.search-btn:hover {
+  color: #ffffff;
+}
+
+/* The Glow Effect triggered by input focus */
+.search-container:focus-within {
+  border-color: #2b2e4a;
+  box-shadow: 
+    -10px 0 20px -5px rgba(236, 0, 140, 0.3),  /* Magenta glow on left */
+    10px 0 20px -5px rgba(0, 81, 255, 0.4);   /* Royal blue glow on right */
+}
