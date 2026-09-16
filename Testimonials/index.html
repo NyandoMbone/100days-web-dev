@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Testimonial Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="testimonial-section">
+        <h2 class="section-title">What Our Clients Say</h2>
+        
+        <!-- CSS Radio Inputs to Track Slider Pages -->
+        <input type="radio" name="slider" id="slide-page-1" checked class="slider-input">
+        <input type="radio" name="slider" id="slide-page-2" class="slider-input">
+
+        <!-- Outer viewport containing the sliding elements -->
+        <div class="slider-window">
+            <div class="slider-track">
+                
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</p>
+                    <div class="user-info">
+                        <div class="avatar-placeholder pink"><img src="av1.jpg"></div>
+                        <div>
+                            <h4 class="user-name">Courtney Hages</h4>
+                            <p class="user-title">Product Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</p>
+                    <div class="user-info">
+                        <div class="avatar-placeholder yellow"><img src="av3.jpg"></div>
+                        <div>
+                            <h4 class="user-name">Micheal Miles</h4>
+                            <p class="user-title">Project Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</p>
+                    <div class="user-info">
+                        <div class="avatar-placeholder orange"><img src="av2.jpg"></div>
+                        <div>
+                            <h4 class="user-name">Mellissa Anne</h4>
+                            <p class="user-title">Operations Lead</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</p>
+                    <div class="user-info">
+                        <div class="avatar-placeholder blue"><img src="av4.jpg"></div>
+                        <div>
+                            <h4 class="user-name">Jenny Tig</h4>
+                            <p class="user-title">CEO</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Slider Controls (Grouped by state) -->
+        <div class="slider-controls controls-page-1">
+            <label for="slide-page-2" class="nav-btn btn-prev">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </label>
+            <label for="slide-page-2" class="nav-btn btn-next">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </label>
+        </div>
+
+        <div class="slider-controls controls-page-2">
+            <label for="slide-page-1" class="nav-btn btn-prev">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </label>
+            <label for="slide-page-1" class="nav-btn btn-next">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </label>
+        </div>
+    </section>
+
+</body>
+</html>

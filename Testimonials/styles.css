@@ -1,0 +1,184 @@
+/* Base Reset & Fonts */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #f7ede8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Section Container */
+.testimonial-section {
+    background-color: #fcfbfa;
+    width: 100%;
+    max-width: 1200px;
+    padding: 80px 0 120px 0;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Hide Radio Buttons Completely */
+.slider-input {
+    display: none;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+/* Track Window Viewport */
+.slider-window {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 40px;
+}
+
+/* Moving Sliding Container (Calculated using card width + gaps) */
+.slider-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Individual Cards */
+.testimonial-card {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 40px 30px;
+    width: 360px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-text {
+    color: #4a4a4a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Profile Section Layout */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Colorful Image Placeholders */
+.avatar-placeholder {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+.pink { background-color: #e5989b; }
+.yellow { background-color: #ffcdb2; }
+.orange { background-color: #b5828c; }
+.blue { background-color: #6d6875; }
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.user-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.user-title {
+    font-size: 0.8rem;
+    color: #8c8c8c;
+    margin-top: 2px;
+}
+
+/* Control Navigation Engine Styles */
+.slider-controls {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Hidden by default */
+    gap: 12px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #8c8c8c;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    border-color: #111111;
+    color: #111111;
+}
+
+/* PURE CSS MECHANICS: Listening to State Inputs */
+
+/* 1. When Page 1 is active -> Show Control Set 1 and don't shift track */
+#slide-page-1:checked ~ .slider-controls.controls-page-1 {
+    display: flex;
+}
+#slide-page-1:checked ~ .slider-window .slider-track {
+    transform: translateX(0px);
+}
+
+/* 2. When Page 2 is active -> Show Control Set 2 and shift track left by 2 cards width + gaps */
+#slide-page-2:checked ~ .slider-controls.controls-page-2 {
+    display: flex;
+}
+#slide-page-2:checked ~ .slider-window .slider-track {
+    /* Shifts position over by 2 card modules (360px width + 30px gap = 390px per card) */
+    transform: translateX(-780px); 
+}
+
+/* Optional Effect: Dimming un-focused cards per page state */
+#slide-page-1:checked ~ .slider-window .testimonial-card:nth-child(n+3) {
+    opacity: 0.4;
+}
+#slide-page-2:checked ~ .slider-window .testimonial-card:nth-child(-n+2) {
+    opacity: 0.4;
+}
+
+/* Mobile Layout Fixes */
+@media (max-width: 800px) {
+    .slider-window {
+        padding: 0 20px;
+    }
+    .testimonial-card {
+        width: calc(100vw - 80px);
+    }
+    /* Simple reset on shift metrics for flexible layout mobile grids */
+    #slide-page-2:checked ~ .slider-window .slider-track {
+        transform: translateX(calc(-200vw + 160px));
+    }
+}
