@@ -1,0 +1,208 @@
+/* --- Reset & Base Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111111;
+  overflow-x: hidden;
+}
+
+
+/* --- Hero Section Background --- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* Replaced with a high-quality landscape placeholder. Swap with your own asset path. */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0)), 
+              url(pexels-goran-dojcinovic-1793126-31695079.jpg) no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+/* --- Floating Navigation Bar --- */
+.navbar {
+  position: absolute;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 8px 14px 8px 24px;
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  z-index: 10;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #111;
+}
+
+.logo-icon {
+  color: #ff5722; /* Accent brand color */
+  font-size: 1.3rem;
+  padding-bottom: 3px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+  color: #111111;
+}
+
+.btn-login {
+  text-decoration: none;
+  background: #111111;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn-login:hover {
+  background: #2a2a2a;
+}
+
+/* --- Hero Content Area --- */
+.hero-container {
+  margin: auto;
+  text-align: center;
+  max-width: 700px;
+  padding-top: 80px; /* Leaves room for floating navbar */
+  z-index: 5;
+  margin-top: 60px;
+}
+
+/* Announcement Badge */
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+/* Main Typography */
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  color: #111111;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #050000;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+
+/* CTA Buttons */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  text-decoration: none;
+  background: #ffffff;
+  color: #111111;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.btn-secondary {
+  text-decoration: none;
+  color: #111111;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.btn-secondary:hover {
+  opacity: 0.7;
+}
+
+/* --- Scroll Down Indicator --- */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hides desktop links on mobile device screens */
+  }
+  
+  .navbar {
+    width: 95%;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
