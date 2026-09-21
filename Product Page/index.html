@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page - YourSkin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">YourSkin</div>
+    <nav class="nav-links">
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="#">Search</a>
+      <a href="#">Cart (0)</a>
+    </div>
+  </header>
+
+  <!-- Main Container  -->
+  <main class="product-container">
+    
+    <!-- Left Section: Gallery -->
+    <section class="gallery-section">
+      <div class="main-image">
+        <img src="https://i.pinimg.com/1200x/46/94/26/46942681d8e055c9c9bbc4a0f975155a.jpg" alt="Chicori Product">
+      </div> 
+      <div class="thumbnails">
+        <img class="active" src="https://i.pinimg.com/1200x/ba/83/f2/ba83f224cafaac113d68ef88e1a69f6a.jpg" alt="Thumb 1">
+        <img src="https://i.pinimg.com/1200x/ba/83/f2/ba83f224cafaac113d68ef88e1a69f6a.jpg" alt="Thumb 2">
+        <img src="https://i.pinimg.com/1200x/ba/83/f2/ba83f224cafaac113d68ef88e1a69f6a.jpg" alt="Thumb 3">
+        <img src="https://i.pinimg.com/1200x/ba/83/f2/ba83f224cafaac113d68ef88e1a69f6a.jpg" alt="Thumb 4">
+        <img src="https://i.pinimg.com/1200x/ba/83/f2/ba83f224cafaac113d68ef88e1a69f6a.jpg" alt="Thumb 5">
+      </div>
+    </section>
+
+    <!-- Right Section: Product Details -->
+    <section class="details-section">
+      <span class="category-tag">SKINCARE</span>
+      <h1 class="product-title">Green Plum Refreshing Cleanser</h1>
+      
+      <div class="rating-price">
+        <div class="stars">★★★★☆ <span class="review-count">(42)</span></div>
+        <div class="price">$20</div>
+      </div>
+      
+      <p class="promo-text">✨ 10% off your first order with code FIRST10</p>
+
+      <!-- Purchase Options -->
+      <div class="purchase-options">
+        <div class="option-row">
+          <input type="radio" id="one-time" name="purchase-type" checked>
+          <label for="one-time">One-time purchase</label>
+          <span class="option-price">$20</span>
+        </div>
+        <div class="option-row">
+          <input type="radio" id="subscribe" name="purchase-type">
+          <label for="subscribe">Subscribe & Save (15%)</label>
+          <span class="option-price">$17</span>
+        </div>
+      </div>
+
+      <!-- Add to Cart Action -->
+      <div class="cart-controls">
+        <div class="quantity-selector">
+          <button>-</button>
+          <input type="number" value="1" min="1">
+          <button>+</button>
+        </div>
+        <button class="btn-add-cart">ADD TO CART</button>
+      </div>
+
+      <button class="btn-favorite">Add to Wishlist ♡</button>
+
+      <!-- Product Info Tabs -->
+      <div class="tabs-container">
+        <div class="tabs-header">
+          <button class="tab-btn active">How to use</button>
+          <button class="tab-btn">Ingredients</button>
+          <button class="tab-btn">Sustainability</button>
+        </div>
+        <div class="tab-content">
+          <p>Wet hands and gently massage the cleanser onto your face, then rinse with lukewarm water for a fresh, hydrated glow. For a deeper clean, use after our Ginseng Cleansing Oil or Radiance Cleansing Balm.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Section: Recommendations -->
+  <section class="recommendations">
+    <h2 class="section-title">You might also like</h2>
+    <div class="product-grid">
+      
+      <!-- Card 1 -->
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="https://i.pinimg.com/1200x/d0/c1/78/d0c1788d0efa0e68da7d8ca18bf26e11.jpg" alt="Opuntia">
+        </div>
+        <h3>Green Plum Refreshing Toner</h3>
+        <p class="card-price">$13</p>
+        <div class="card-stars">★★★★★ (12)</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="https://i.pinimg.com/1200x/99/57/db/9957dbe0dd4d51cc2cf7321a4d56fd00.jpg" alt="Grace">
+        </div>
+        <h3>Dayscreen Moisturizer SPF 30</h3>
+        <p class="card-price">$20</p>
+        <div class="card-stars">★★★★☆ (8)</div>
+      </div>
+
+      <!-- Card 3  -->
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="https://i.pinimg.com/736x/bc/31/3c/bc313c2584d7730407f6228fa9c1ae43.jpg" alt="Velvet">
+        </div>
+        <h3>Calming Serum Green Tea + Panthenol </h3>
+        <p class="card-price">$17</p>
+        <div class="card-stars">★★★★★ (45)</div>
+      </div>
+
+      <!-- Card 4  -->
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="https://i.pinimg.com/736x/6f/14/ac/6f14acc57f353ef7546cf96e1dbab301.jpg" alt="Biopacent">
+        </div>
+        <h3>Green Plum Refreshing Toner AHA + BHA</h3>
+        <p class="card-price">$18</p>
+        <div class="card-stars">★★★★☆ (21)</div>
+      </div>
+
+    </div>
+    
+    <div class="more-btn-container">
+      <button class="btn-more">More products →</button>
+    </div>
+  </section>
+
+</body>
+</html>
