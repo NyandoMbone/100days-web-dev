@@ -1,0 +1,241 @@
+/* --- Global Resets & Setup --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container to align cards horizontally */
+.card-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* --- Base Component Styles --- */
+.product-card {
+  width: 320px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Badges & Overlays */
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.pagination-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.dot.active {
+  background-color: #ffffff;
+  width: 12px;
+  border-radius: 3px;
+}
+
+/* Typography & Layout elements */
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.description {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 0.65rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+/* Interactive Buttons */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+/* --- Variation 1: Standard White Card Customizations --- */
+.standard-card {
+  background-color: #ffffff;
+}
+
+.standard-card .image-container {
+  height: 200px;
+  border-radius: 24px;
+  margin: 12px 12px 0 12px;
+  overflow: hidden;
+}
+
+.standard-card .image-container img {
+  height: 100%;
+}
+
+.standard-card .badge {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  backdrop-filter: blur(4px);
+}
+
+.standard-card .product-title {
+  color: #111111;
+}
+
+.standard-card .price {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+
+.standard-card .description {
+  color: #767676;
+}
+
+.standard-card .tag {
+  background-color: #f3f3f3;
+  color: #555555;
+}
+
+.standard-card .btn-dark {
+  background-color: #3d302c;
+  color: #ffffff;
+}
+
+
+/* --- Variation 2: Immersive Full-Gradient Card Customizations --- */
+.immersive-card {
+  position: relative;
+  background: linear-gradient(180deg, #d99116 0%, #b87300 100%);
+  color: #ffffff;
+}
+
+.immersive-card .image-container {
+  height: 240px;
+}
+
+.immersive-card .image-container img {
+  height: 100%;
+}
+
+.immersive-card .badge {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+/* Beautiful color transition overlay between photo and background */
+.immersive-card .gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(217, 145, 22, 0) 0%, rgba(217, 145, 22, 1) 100%);
+}
+
+.immersive-card .card-content {
+  background-color: #d99116; /* Matches the top of the card's base gradient */
+  padding-top: 5px;
+}
+
+.immersive-card .price {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.immersive-card .description {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.immersive-card .tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.immersive-card .btn-light {
+  background-color: #ffffff;
+  color: #111111;
+}
