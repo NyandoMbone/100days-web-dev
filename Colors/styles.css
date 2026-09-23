@@ -1,0 +1,138 @@
+/* Reset and Layout Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Centering the container on large desktop displays */
+        body, html {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #1e1e1e; /* Dark frame color for screen space outside the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Bounding container that restricts images to a crisp size on large monitors */
+        .app-window {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 1000px;
+            max-height: 957px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); /* Elegant drop shadow on desktop */
+            overflow: hidden;
+            background-color: #f7f7f7;
+        }
+
+        @media (max-width: 850px) {
+    .app-window {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+        /* 1. Background Layers Container */
+        .bg-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+        /* Default Initial Background (Before anything is tapped) */
+        .bg-default {
+            background-color: #f7f7f7;
+            opacity: 1;
+        }
+
+        /* Assigning background images to each color state - Put your links here! */
+        .bg-eggshell { background-image: url('https://i.pinimg.com/736x/f7/2b/80/f72b8075179f517f8426dadd854846ef.jpg'); }
+        .bg-stone { background-image: url('https://i.pinimg.com/736x/d9/e3/62/d9e362cc9f23a10b6d50a97e467afc0a.jpg'); }
+        .bg-roman-coffee { background-image: url('https://i.pinimg.com/736x/59/51/9c/59519c9c949f1b2402b687b494a63861.jpg'); }
+        .bg-sea-pink { background-image: url('https://i.pinimg.com/736x/1e/38/52/1e385278297916a7bdb83202047a3524.jpg'); }
+
+        /* 2. Hide Radio Buttons Entirely */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* 3. CSS Logic: Change Background Based on Active Radio Button */
+        #rad-eggshell:checked ~ .app-window .bg-eggshell { opacity: 1; z-index: 2; }
+        #rad-stone:checked ~ .app-window .bg-stone { opacity: 1; z-index: 2; }
+        #rad-coffee:checked ~ .app-window .bg-roman-coffee { opacity: 1; z-index: 2; }
+        #rad-pink:checked ~ .app-window .bg-sea-pink { opacity: 1; z-index: 2; }
+        
+        /* Hide default background once any option is picked */
+        #rad-eggshell:checked ~ .app-window .bg-default,
+        #rad-stone:checked ~ .app-window .bg-default,
+        #rad-coffee:checked ~ .app-window .bg-default,
+        #rad-pink:checked ~ .app-window .bg-default { opacity: 0; }
+
+        /* 4. Palette UI Panel Overlay */
+        .palette-container {
+            position: relative;
+            z-index: 10; /* Ensures buttons stay on top of the backgrounds */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+        }
+
+        /* Pill Button Styling mimicking the image */
+        .color-pill {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 280px;
+            height: 65px;
+            padding: 0 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            user-select: none;
+            border: 2px solid transparent;
+        }
+
+        .color-pill:hover {
+            transform: scale(1.03);
+        }
+
+        /* Color Labels */
+        .color-name {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .color-hex {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 2px;
+        }
+
+        /* Specific Pill Colors and Text Themes */
+        .pill-eggshell { background-color: #F0EDDC; color: #6e6a57; }
+        .pill-stone { background-color: #B9AC8C; color: #ffffff; }
+        .pill-roman-coffee { background-color: #845F4A; color: #ffffff; }
+        .pill-sea-pink { background-color: #DFA0AA; color: #ffffff; }
+        
+        /* Optional active state borders when an item is selected */
+        #rad-eggshell:checked ~ .app-window .pill-eggshell { border-color: #6e6a57; }
+        #rad-stone:checked ~ .app-window .pill-stone { border-color: #ffffff; }
+        #rad-coffee:checked ~ .app-window .pill-roman-coffee { border-color: #ffffff; }
+        #rad-pink:checked ~ .app-window .pill-sea-pink { border-color: #ffffff; }

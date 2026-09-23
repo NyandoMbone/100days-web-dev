@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Background Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+
+    <!-- Hidden Radio Controller Inputs (Must be outside the app-window wrapper for the CSS selectors to reach) -->
+    <input type="radio" name="palette-switch" id="rad-eggshell">
+    <input type="radio" name="palette-switch" id="rad-stone">
+    <input type="radio" name="palette-switch" id="rad-coffee">
+    <input type="radio" name="palette-switch" id="rad-pink">
+
+    <!-- The Protected Display Canvas Container -->
+    <div class="app-window">
+
+        <!-- Background Layers -->
+        <div class="bg-layer bg-default"></div>
+        <div class="bg-layer bg-eggshell"></div>
+        <div class="bg-layer bg-stone"></div>
+        <div class="bg-layer bg-roman-coffee"></div>
+        <div class="bg-layer bg-sea-pink"></div>
+
+        <!-- Buttons Panel Overlay -->
+        <div class="palette-container">
+
+            <label for="rad-eggshell" class="color-pill pill-eggshell">
+                <span class="color-name">Eggshell</span>
+                <span class="color-hex">#F0EDDC</span>
+            </label>
+
+            <label for="rad-stone" class="color-pill pill-stone">
+                <span class="color-name">Stone</span>
+                <span class="color-hex">#B9AC8C</span>
+            </label>
+
+            <label for="rad-coffee" class="color-pill pill-roman-coffee">
+                <span class="color-name">Roman Coffee</span>
+                <span class="color-hex">#845F4A</span>
+            </label>
+
+            <label for="rad-pink" class="color-pill pill-sea-pink">
+                <span class="color-name">Sea Pink</span>
+                <span class="color-hex">#DFA0AA</span>
+            </label>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
