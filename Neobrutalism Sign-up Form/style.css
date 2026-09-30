@@ -1,0 +1,139 @@
+/* Reset and Font Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+}
+
+body {
+    background-color: #ffd6ca; /* Soft peach/pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card Container */
+.signup-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 30px;
+    border: 2px solid #000000;
+    border-radius: 24px;
+    box-shadow: 12px 12px 0px #000000; /* Harsh black drop shadow */
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    color: #4ade80; /* Vibrant green */
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* Form Groups */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: #000000;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 0.8rem;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0px 4px 0px #000000; /* Bottom inner box shadow style */
+    transition: transform 0.1s ease;
+}
+
+input::placeholder {
+    color: #a3a3a3;
+    font-weight: bold;
+}
+
+input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 0px #000000;
+}
+
+/* Terms and Conditions Checkbox */
+.checkbox-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: #525252;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #4ade80;
+}
+
+/* Sign Up Button */
+.signup-btn {
+    width: 100%;
+    background-color: #4ade80;
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: 900;
+    padding: 14px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0px 5px 0px #000000;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin-bottom: 30px;
+}
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 7px 0px #000000;
+}
+
+.signup-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0px 2px 0px #000000;
+}
+
+/* Footer Link */
+.login-text {
+    font-size: 0.8rem;
+    color: #525252;
+    font-weight: bold;
+}
+
+.login-text a {
+    color: #4ade80;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
