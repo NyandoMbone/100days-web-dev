@@ -1,0 +1,90 @@
+/* Layout and Background Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Navigation Container */
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 100px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Hide the native radio button circles completely */
+.nav-item input[type="radio"] {
+  display: none;
+}
+
+/* Item block setup */
+.nav-item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #737373; /* Neutral gray for unselected text */
+  gap: 4px;
+}
+
+/* Capsule framing around the SVG icons */
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Icon Sizing and Vector Colors */
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* Inherits color state from parent font colors */
+}
+
+/* Label text styles */
+.nav-label {
+  font-size: 11px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* --- Interactive States (HTML/CSS Only) --- */
+
+/* 1. Light Gray Hover State (Triggers on unselected elements) */
+.nav-item label:hover .icon-wrapper {
+  background-color: #f4f4f5;
+  color: #1c1917;
+}
+.nav-item label:hover .nav-label {
+  color: #1c1917;
+}
+
+/* 2. Blue Selected State (Triggers instantly when clicked) */
+.nav-item input[type="radio"]:checked + label {
+  color: #1d4ed8; /* Blue text color */
+}
+
+.nav-item input[type="radio"]:checked + label .icon-wrapper {
+  background-color: #dbeafe; /* Blue pill capsule background */
+  color: #1d4ed8; /* Blue vector icon color */
+}
