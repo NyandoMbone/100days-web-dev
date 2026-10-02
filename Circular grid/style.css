@@ -1,0 +1,181 @@
+/* General Page Styling with Cyberpunk Vibe Background */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #251c2c 0%, #0d0912 100%);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+}
+
+/* Hide Radio Buttons Completely */
+input[type="radio"] {
+  display: none;
+}
+
+/* Main Container Layout */
+.menu-container {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outer Dark Disc and Arc Highlight Wrapper */
+.outer-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(30, 27, 36, 0.75);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6), 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* The Glowing Curved Selector Line on Top of Ring */
+.outer-ring::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.85);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transform: rotate(0deg);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Center Inner Circle Display Mask */
+.center-display {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #110e15;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Text Container inside Center */
+.text-wrapper {
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Hide all text fields by default */
+.text-wrapper .title {
+  display: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.text-wrapper .subtitle {
+  display: block;
+  font-size: 0.75rem;
+  color: #797383;
+  letter-spacing: 1px;
+  margin-top: 6px;
+}
+
+/* Placement Ring for Icons */
+.menu-items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Common Item Label Class */
+.menu-item {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8c8599;
+  cursor: pointer;
+  transition: color 0.25s ease, transform 0.25s ease;
+  /* Shift positions to center alignment origins */
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+/* SVG Vector Sizing */
+.icon {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effects on individual items */
+.menu-item:hover {
+  color: #ffffff;
+}
+.menu-item:hover .icon {
+  transform: scale(1.15);
+}
+
+/* Dynamic Positioning for 6 Items Radially around Center Axis */
+/* Center of frame is 50% 50%, Radius distribution is roughly 36% */
+.item-1 { top: 14%; left: 50%; }  /* Cube (Top) */
+.item-2 { top: 32%; left: 81%; }  /* Settings (Top Right) */
+.item-3 { top: 68%; left: 81%; }  /* Database (Bottom Right) */
+.item-4 { top: 86%; left: 50%; }  /* Profile (Bottom) */
+.item-5 { top: 68%; left: 19%; }  /* Layout (Bottom Left) */
+.item-6 { top: 32%; left: 19%; }  /* Grid (Top Left) */
+
+
+/* ------------------------------------------------------------- */
+/* PURE CSS SELECTION & FEEDBACK LOGIC                           */
+/* ------------------------------------------------------------- */
+
+/* 1. Show dynamic title text based on checked hidden radio button */
+#item-cube:checked ~ .center-display .title-cube { display: block; }
+#item-settings:checked ~ .center-display .title-settings { display: block; }
+#item-database:checked ~ .center-display .title-database { display: block; }
+#item-profile:checked ~ .center-display .title-profile { display: block; }
+#item-layout:checked ~ .center-display .title-layout { display: block; }
+#item-grid:checked ~ .center-display .title-grid { display: block; }
+
+/* 2. Illuminate Active Selected Icon State */
+#item-cube:checked ~ .menu-items .item-1 { color: #ffffff; }
+#item-settings:checked ~ .menu-items .item-2 { color: #ffffff; }
+#item-database:checked ~ .menu-items .item-3 { color: #ffffff; }
+#item-profile:checked ~ .menu-items .item-4 { color: #ffffff; }
+#item-layout:checked ~ .menu-items .item-5 { color: #ffffff; }
+#item-grid:checked ~ .menu-items .item-6 { color: #ffffff; }
+
+/* 3. Spin Outer Selection Arch Pointer Line to face Active Area */
+#item-cube:checked ~ .outer-ring::before { transform: rotate(0deg); }
+#item-settings:checked ~ .outer-ring::before { transform: rotate(60deg); }
+#item-database:checked ~ .outer-ring::before { transform: rotate(120deg); }
+#item-profile:checked ~ .outer-ring::before { transform: rotate(180deg); }
+#item-layout:checked ~ .outer-ring::before { transform: rotate(240deg); }
+#item-grid:checked ~ .outer-ring::before { transform: rotate(300deg); }
+
+
+/* Fade In Text Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
