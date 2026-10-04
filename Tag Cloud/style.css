@@ -1,0 +1,111 @@
+/* Base styles and centering setup */
+body {
+  background-color: #121212; /* Dark background matching the original image */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Card Container */
+.tags-container {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 24px 32px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling */
+.tags-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666666;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 12px;
+}
+
+.tags-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Tags layout grid */
+.tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Individual Base Tag layout */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tag svg {
+  width: 14px;
+  height: 14px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Component Color Variations */
+
+/* Pending (Orange) */
+.tag-pending {
+  background-color: #fff4eb;
+  color: #b25e24;
+}
+
+/* In Progress (Blue) */
+.tag-progress {
+  background-color: #eef7ff;
+  color: #2b6cb0;
+}
+
+/* Submitted (Purple) */
+.tag-submitted {
+  background-color: #f3f0ff;
+  color: #6b46c1;
+}
+
+/* In Review (Yellow) */
+.tag-review {
+  background-color: #fefcbf;
+  color: #744210;
+}
+
+/* Success (Green) */
+.tag-success {
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+/* Failed (Red) */
+.tag-failed {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+/* Expired (Grey) */
+.tag-expired {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
