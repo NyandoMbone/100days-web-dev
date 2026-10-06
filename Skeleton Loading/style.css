@@ -1,0 +1,125 @@
+/* General Page Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Layout */
+.card-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card Base Structure */
+.card {
+  width: 320px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:not(.skeleton):hover {
+  transform: translateY(-4px);
+}
+
+.card-image {
+  height: 55%;
+  background-size: cover;
+  background-position: center;
+  background-color: #eaeaea;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Travel-specific Layout Tweaks */
+.card-header-row, 
+.skeleton-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #00b4d8; /* Modern travel teal/blue accent */
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* --- Skeleton Loading Animation Styles --- */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton .skeleton-image,
+.skeleton .skeleton-text {
+  background: linear-gradient(90deg, #f0f2f5 25%, #e1e4e8 50%, #f0f2f5 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Loading state specific shapes */
+.skeleton-image {
+  height: 55%;
+  width: 100%;
+}
+
+.skeleton-text {
+  border-radius: 6px;
+}
+
+.skeleton-title {
+  height: 22px;
+  width: 55%;
+}
+
+.skeleton-price {
+  height: 22px;
+  width: 20%;
+}
+
+.skeleton-body {
+  height: 48px;
+  width: 100%;
+  margin-top: 4px;
+}
