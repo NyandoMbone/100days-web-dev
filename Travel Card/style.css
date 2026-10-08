@@ -1,0 +1,126 @@
+/* Reset basic styles and set up universal font styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #d3ede4f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card layout container */
+.card {
+  background-color: #72a46cae;
+  width: 340px;
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.04);
+}
+
+/* Header element styling */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tag-status {
+  background-color: #1e2229;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.tag-date {
+  display: flex;
+  align-items: center;
+  background-color: #1e2229;
+  padding: 3px;
+  border-radius: 20px;
+}
+
+.tag-date .month {
+  color: #a1a1a1;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 0 8px;
+}
+
+.tag-date .day {
+  background-color: #ffffff;
+  color: #1e2229;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 16px;
+}
+
+/* Typography styles */
+.card-body h2 {
+  color: #07080a;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.card-body p {
+  color: #1a1b1c;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Image section setup with text positioning overlays */
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location-overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.geo-icon {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.place-name {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.region-name {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
