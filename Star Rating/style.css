@@ -1,0 +1,138 @@
+/* Layout Reset & Page Center */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Dark outer background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Review Card Box */
+.review-card {
+    background-color: #121212; /* Subtle dark grey box */
+    border: 1px solid #1f1f1f;
+    border-radius: 8px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stars Container (Wrapped using wrap layout mechanics) */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap-reverse; /* Reverses order and pushes texts below stars */
+    gap: 6px;
+    width: 100%;
+}
+
+/* Hide raw radio boxes */
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+/* Default Empty Star Style */
+.star-rating label {
+    font-size: 2.2rem;
+    color: #333639; /* Dark unselected star color */
+    cursor: pointer;
+    transition: color 0.15s ease, transform 0.1s ease;
+    margin-bottom: 16px;
+}
+
+/* Persistent Selected Fill State */
+.star-rating input[type="radio"]:checked ~ label {
+    color: #ffd043; /* Yellow active stars */
+}
+
+/* Live Hover Effect */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffde6a;
+}
+
+/* Responsive Click Feedback */
+.star-rating label:active {
+    transform: scale(0.9);
+}
+
+/* Dynamic Text Management Base */
+.feedback-text {
+    display: none; /* Hide all text options by default */
+    width: 100%;
+    color: #ffd043;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Show the default fallback text when nothing is picked */
+.text-default {
+    display: block;
+}
+
+/* Hide default message as soon as any button gets checked */
+.star-rating input[type="radio"]:checked ~ .text-default {
+    display: none;
+}
+
+/* Show specific text elements depending on which target input is active */
+#star1:checked ~ .text-1,
+#star2:checked ~ .text-2,
+#star3:checked ~ .text-3,
+#star4:checked ~ .text-4,
+#star5:checked ~ .text-5 {
+    display: block;
+}
+
+/* User Input Box */
+.experience-input {
+    width: 100%;
+    height: 90px;
+    background-color: #1a1a1a;
+    border: 1px solid #282828;
+    border-radius: 4px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.experience-input::placeholder {
+    color: #666666;
+}
+
+.experience-input:focus {
+    border-color: #444444;
+}
+
+/* Post Submission Button */
+.post-btn {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: 1px solid #282828;
+    color: #888888;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    margin-top: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.post-btn:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
