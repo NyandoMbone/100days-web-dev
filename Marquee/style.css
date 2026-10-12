@@ -1,0 +1,70 @@
+/* Centering the content beautifully on the page */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fcf6ed; /* Soft, warm background */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Parent container wrapper */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* The modern, resizable text box container */
+.resizable-box {
+    display: inline-block;
+    min-width: 200px;
+    max-width: 600px;
+    width: 320px; /* Default starting width */
+    padding: 12px 0; /* Keep side padding 0 so text flows completely to the edges */
+    background-color: #ffff42; /* Vibrant modern yellow highlight */
+    color: #111111;
+    border-radius: 6px;
+    box-sizing: border-box;
+    
+    /* Native resizing and masking */
+    overflow: hidden; /* Hides text outside the box edges */
+    resize: horizontal; 
+}
+
+/* The infinite moving track holding the elements */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    /* Adjust '15s' to make the moving speed faster or slower */
+    animation: scroll-left 15s linear infinite; 
+}
+
+/* Styling the moving text items */
+.marquee-track span {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.4;
+    padding-right: 50px; /* Space buffer before the sentence repeats */
+}
+
+/* The scrolling physics logic */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves exactly halfway for a seamless endless seam */
+    }
+}
+
+/* Styled label below the component */
+.label {
+    margin-top: 16px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111111;
+    letter-spacing: -0.01em;
+}
