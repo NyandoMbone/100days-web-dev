@@ -1,0 +1,124 @@
+/* Reset and Page Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #b07c83, #8c626c); /* Matches the background color in the image */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Menu Container */
+.social-menu {
+  display: flex;
+  gap: 25px;
+}
+
+/* Individual Icon Item Wrapper */
+.icon-item {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* The Base Circular Button */
+.icon-item .icon {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+  color: #333333;
+  font-size: 22px;
+  z-index: 2;
+}
+
+/* Tooltip Styling */
+.icon-item .tooltip {
+  position: absolute;
+  top: -50px; /* Positions it nicely above the button */
+  background: #ffffff;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Tooltip Little Triangle Arrow */
+.icon-item .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Hover States & Transitions */
+
+/* Hover triggers tooltip push up and fade in */
+.icon-item:hover .tooltip {
+  top: -60px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Color definitions for dynamic styling on hover */
+.facebook:hover .icon,
+.facebook:hover .tooltip,
+.facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.twitter:hover .icon,
+.twitter:hover .tooltip,
+.twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.instagram:hover .icon,
+.instagram:hover .tooltip,
+.instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.github:hover .icon,
+.github:hover .tooltip,
+.github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.youtube:hover .icon,
+.youtube:hover .tooltip,
+.youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
