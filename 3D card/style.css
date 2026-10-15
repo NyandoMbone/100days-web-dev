@@ -1,0 +1,80 @@
+/* Clean reset and centering the logo on the screen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Polka dot background pattern */
+  background-color: #1e293b;
+  background-image: radial-gradient(#334155 2px, transparent 2px);
+  background-size: 24px 24px;
+}
+
+/* Outer container to manage layering and positioning */
+.logo-container {
+  position: relative;
+  width: 450px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* The tilted hollow frame in the background */
+.frame {
+  position: absolute;
+  width: 90%;
+  height: 85%;
+  border: 8px solid #0f172a;
+  transform: rotate(-4deg);
+  z-index: 1;
+  /* Smooth transition if you ever want the frame to move too */
+  transition: transform 0.3s ease;
+}
+
+/* The primary colored content badge */
+.badge {
+  position: absolute;
+  width: 85%;
+  height: 75%;
+  background-color: #0d9488; /* Modern teal color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(3deg) translateY(0);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  /* This creates the smooth glide effect when hovering */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- HOVER EFFECTS --- */
+
+/* When you hover over the container, the badge glides up and changes its shadow */
+.logo-container:hover .badge {
+  /* Translates up by 15px while preserving the original 3deg rotation */
+  transform: rotate(3deg) translateY(-15px);
+  /* Makes the shadow softer and further away to simulate height */
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Optional: The background frame shifts slightly down for a neat separation effect */
+.logo-container:hover .frame {
+  transform: rotate(-4deg) translateY(5px);
+}
+
+/* Bold typography layout */
+.logo-text {
+  color: #0f172a;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
