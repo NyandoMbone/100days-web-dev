@@ -1,0 +1,176 @@
+/* Reset and layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fce4e4; /* Light pink background from reference image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+}
+
+.button-container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.label {
+    font-size: 14px;
+    color: #cc6b6b;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Base 3D Button Style matching the reference image */
+.btn {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: #ff6b6b; /* Soft coral-red top color */
+    color: #ffffff; /* White bold text */
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 18px 45px;
+    border-radius: 25px; /* Rounded pill capsule shape */
+    
+    /* 3D Base Effect using multi-layered box shadow */
+    /* 1px to 8px: solid dark red block base. 15px: soft floor shadow */
+    box-shadow: 
+        0 1px 0 #cc4e4e,
+        0 2px 0 #cc4e4e,
+        0 3px 0 #cc4e4e,
+        0 4px 0 #cc4e4e,
+        0 5px 0 #cc4e4e,
+        0 6px 0 #cc4e4e,
+        0 7px 0 #cc4e4e,
+        0 8px 0 #cc4e4e,
+        0 15px 20px rgba(0, 0, 0, 0.15);
+        
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.2s cubic-bezier(0.25, 0.8, 0.25, 1),
+                background-color 0.2s ease;
+}
+
+/* ==========================================================================
+   VARIANT 1: POP OUT / LIFT UP
+   ========================================================================== */
+.btn-pop:hover {
+    transform: translateY(-4px);
+    /* Extends the solid 3D shadow depth and expands the floor shadow blur */
+    box-shadow: 
+        0 1px 0 #cc4e4e,
+        0 2px 0 #cc4e4e,
+        0 3px 0 #cc4e4e,
+        0 4px 0 #cc4e4e,
+        0 5px 0 #cc4e4e,
+        0 6px 0 #cc4e4e,
+        0 7px 0 #cc4e4e,
+        0 8px 0 #cc4e4e,
+        0 9px 0 #cc4e4e,
+        0 10px 0 #cc4e4e,
+        0 11px 0 #cc4e4e,
+        0 12px 0 #cc4e4e,
+        2px 22px 25px rgba(0, 0, 0, 0.18);
+}
+
+.btn-pop:active {
+    transform: translateY(4px);
+    /* Reduces the depth for a flattened mechanical click */
+    box-shadow: 
+        0 1px 0 #cc4e4e,
+        0 2px 0 #cc4e4e,
+        0 3px 0 #cc4e4e,
+        0 4px 0 #cc4e4e,
+        0 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   VARIANT 2: PUSH DOWN (As shown in your reference video)
+   ========================================================================== */
+.btn-push:hover {
+    transform: translateY(4px);
+    /* Shrinks the 3D base depth layer to look compressed */
+    box-shadow: 
+        0 1px 0 #cc4e4e,
+        0 2px 0 #cc4e4e,
+        0 3px 0 #cc4e4e,
+        0 4px 0 #cc4e4e,
+        0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-push:active {
+    transform: translateY(8px);
+    /* Flushes flat against the background wall */
+    box-shadow: 0 0px 0 #cc4e4e, 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   VARIANT 3: FLOATING SLIDE
+   ========================================================================== */
+.btn-slide {
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Sliding background layer inside the button */
+.btn-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e65c5c; /* Darker red fill */
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-slide:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 1px 0 #cc4e4e,
+        0 2px 0 #cc4e4e,
+        0 3px 0 #cc4e4e,
+        0 4px 0 #cc4e4e,
+        0 5px 0 #cc4e4e,
+        0 6px 0 #cc4e4e,
+        0 7px 0 #cc4e4e,
+        0 8px 0 #cc4e4e,
+        0 9px 0 #cc4e4e,
+        0 10px 0 #cc4e4e,
+        0 16px 22px rgba(0, 0, 0, 0.16);
+}
+
+.btn-slide:hover::before {
+    transform: translateY(0);
+}
+
+.btn-slide:active {
+    transform: translateY(6px);
+    box-shadow: 
+        0 1px 0 #cc4e4e,
+        0 2px 0 #cc4e4e,
+        0 3px 0 #cc4e4e,
+        0 4px 0 #cc4e4e,
+        0 6px 10px rgba(0, 0, 0, 0.15);
+}
