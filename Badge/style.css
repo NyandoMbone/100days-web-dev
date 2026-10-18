@@ -1,0 +1,221 @@
+/* Base Reset and Layout Centering */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 20px;
+}
+
+/* Badge Outer Container */
+.badge {
+  background-color: #ffffff;
+  width: 420px;
+  height: 580px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Slot at the top */
+.slot-cutout {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 24px;
+  background-color: #121212;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+/* Top Abstract Geometric Block */
+.badge-top-pattern {
+  height: 42%;
+  width: 100%;
+  display: flex;
+  background-color: #ff9000; /* Fallback base orange */
+  position: relative;
+}
+
+.left-block, .center-block, .right-block {
+  height: 100%;
+  display: flex;
+}
+
+.left-block {
+  width: 45%;
+  flex-direction: column;
+}
+.center-block {
+  width: 25%;
+  flex-direction: column;
+}
+.right-block {
+  width: 30%;
+}
+
+/* Horizontal pattern building blocks */
+.stripe {
+  flex: 1;
+  width: 100%;
+}
+.stripe.light { background-color: #ffb834; }
+.stripe.dark { background-color: #ff7700; }
+
+.left-block .stripe:nth-child(1) { background-color: #ff9e1b; }
+.left-block .stripe:nth-child(2) { background-color: #ffa82e; }
+.left-block .stripe:nth-child(3) { background-color: #ff8300; }
+.left-block .stripe:nth-child(4) { background-color: #ff6a00; }
+
+.center-block .stripe:nth-child(1) { background-color: #ff8300; }
+.center-block .stripe:nth-child(2) { background-color: #ffb834; }
+.center-block .stripe:nth-child(3) { background-color: #ffa82e; }
+.center-block .stripe:nth-child(4) { background-color: #ff7700; }
+
+/* Vertical pattern blocks right edge */
+.vertical-stripe {
+  height: 100%;
+  flex: 1;
+}
+.vertical-stripe:nth-child(1) { background-color: #ffa82e; }
+.vertical-stripe:nth-child(2) { background-color: #ff7700; }
+.vertical-stripe:nth-child(3) { background-color: #ffa82e; }
+
+/* Lower Main Badge Section */
+.badge-body {
+  padding: 30px 35px 35px 35px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+}
+
+/* Header Text Area */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+.user-name {
+  font-size: 42px;
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.serial-number {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-top: 8px;
+}
+
+/* Dotted Horizontal Line Divider */
+.divider {
+  width: 100%;
+  border-top: 1px dotted #ccc;
+  margin: 30px 0 20px 0;
+}
+
+/* Meta Data Grid Layout */
+.meta-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: 'Space Mono', monospace;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-item .label {
+  font-size: 11px;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.meta-item .value {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-container {
+  align-items: flex-end;
+}
+
+.status-badge {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* Footer Section Containing Stamp and Roles */
+.footer-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.role-info {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Space Mono', monospace;
+}
+
+.role-info .team {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.role-info .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Delicate Round Gold Seal Stamp */
+.gold-stamp {
+  width: 75px;
+  height: 75px;
+  border: 1px solid rgba(207, 166, 112, 0.4);
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stamp-svg {
+  width: 100%;
+  height: 100%;
+  animation: rotateStamp 25s linear infinite; /* Optional subtle rotating dynamic element */
+}
+
+.stamp-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 7.5px;
+  fill: #cfa670;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notion Team ID Badge</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Importing a clean sans-serif and a monospace font via Google Fonts -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="badge">
+    <!-- Top Slot/Cutout -->
+    <div class="slot-cutout"></div>
+    
+    <!-- Top Graphic Section recreated with CSS Grid/Flex layers -->
+    <div class="badge-top-pattern">
+      <div class="left-block">
+        <div class="stripe light"></div>
+        <div class="stripe dark"></div>
+        <div class="stripe light"></div>
+        <div class="stripe dark"></div>
+      </div>
+      <div class="center-block">
+        <div class="stripe dark"></div>
+        <div class="stripe light"></div>
+        <div class="stripe dark"></div>
+        <div class="stripe light"></div>
+      </div>
+      <div class="right-block">
+        <div class="vertical-stripe light"></div>
+        <div class="vertical-stripe dark"></div>
+        <div class="vertical-stripe light"></div>
+      </div>
+    </div>
+
+    <!-- Main Content Body -->
+    <div class="badge-body">
+      <div class="header-row">
+        <h1 class="user-name">Mark<br>Meyers</h1>
+        <span class="serial-number">#390872</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="label">ACCOUNT CREATION</span>
+          <span class="value">WED 15 JAN, 2010</span>
+        </div>
+        <div class="meta-item status-container">
+          <span class="status-badge">CURRENT ACTIVE</span>
+        </div>
+      </div>
+
+      <div class="footer-row">
+        <div class="role-info">
+          <span class="team">DESIGN TEAM</span>
+          <span class="title">SENIOR DEVELOPER</span>
+        </div>
+        
+        <!-- Circular Gold Stamp Graphic -->
+        <div class="gold-stamp">
+          <svg viewBox="0 0 100 100" class="stamp-svg">
+            <path id="textPath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+            <text class="stamp-text">
+              <textPath href="#textPath" startOffset="0%">MADE BY BRANCH • MADE BY BRANCH • </textPath>
+            </text>
+            <!-- Minimal branch icon lines in center -->
+            <g class="stamp-icon" stroke="#cfa670" stroke-width="2" fill="none" stroke-linecap="round">
+              <line x1="50" y1="35" x2="50" y2="65" />
+              <path d="M 40,43 Q 50,48 50,48 Q 50,48 60,43" />
+              <path d="M 38,51 Q 50,56 50,56 Q 50,56 62,51" />
+              <path d="M 42,59 Q 50,63 50,63 Q 50,63 58,59" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
