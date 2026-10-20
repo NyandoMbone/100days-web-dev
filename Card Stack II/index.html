@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Casual Card Stack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="interface-container">
+    
+    <!-- Functional states toggled by click labels -->
+    <input type="radio" name="deck-control" id="card1" checked>
+    <input type="radio" name="deck-control" id="card2">
+    <input type="radio" name="deck-control" id="card3">
+    <input type="radio" name="deck-control" id="card4">
+
+    <!-- Top Counter & Arrow Control Bar -->
+    <div class="interface-header">
+      <div class="counter-wrapper">
+        <!-- The visual fraction circle filled dynamically via CSS conic-gradient -->
+        <div class="counter-circle"></div>
+        <div><span class="current-num"></span> / 4</div>
+      </div>
+      
+      <!-- Overlapping functional arrow layers -->
+      <div class="nav-wrapper">
+        <label for="card2" class="nav-btn to-card2">&raquo;</label>
+        <label for="card3" class="nav-btn to-card3">&raquo;</label>
+        <label for="card4" class="nav-btn to-card4">&raquo;</label>
+        <label for="card1" class="nav-btn to-card1">&raquo;</label>
+      </div>
+    </div>
+
+    <!-- Cards Display Deck Container -->
+    <div class="card-deck">
+      
+      <!-- Card 1 -->
+      <div class="card c1">
+        <div class="card-logo">--__--</div>
+        <div class="card-content">Hey there!<br>Welcome to my site.</div>
+        <div class="card-footer">&gt; START HERE _</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card c2">
+        <div class="card-logo">--__--</div>
+        <div class="card-content">Just chilling,<br>coding things up.</div>
+        <div class="card-footer">&gt; CURRENT VIBE _</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card c3">
+        <div class="card-logo">--__--</div>
+        <div class="card-content">Keep it simple.<br>Keep it casual.</div>
+        <div class="card-footer">&gt; MY PHILOSOPHY _</div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card c4">
+        <div class="card-logo">--__--</div>
+        <div class="card-content">That is all!<br>Have a great day.</div>
+        <div class="card-footer">&gt; THE END _</div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
